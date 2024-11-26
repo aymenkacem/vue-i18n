@@ -127,7 +127,7 @@ export default class VueI18n {
     }
 
     /**
-     * @param choice {number} a choice index given by the input to $tc: `$tc('path.to.rule', choiceIndex)`
+     * @param choice {number} a choice index given by the input to $tp: `$tp('path.to.rule', choiceIndex)`
      * @param choicesLength {number} an overall amount of available choices
      * @returns a final choice index
     */
@@ -750,7 +750,7 @@ export default class VueI18n {
     return this._i(key, locale, this._getMessages(), null, values)
   }
 
-  _tc (
+  _tp (
     key: Path,
     _locale: Locale,
     messages: LocaleMessages,
@@ -780,8 +780,8 @@ export default class VueI18n {
     return choices[choice].trim()
   }
 
-  tc (key: Path, choice?: number, ...values: any): TranslateResult {
-    return this._tc(key, this.locale, this._getMessages(), null, choice, ...values)
+  tp (key: Path, choice?: number, ...values: any): TranslateResult {
+    return this._tp(key, this.locale, this._getMessages(), null, choice, ...values)
   }
 
   _te (key: Path, locale: Locale, messages: LocaleMessages, ...args: any): boolean {

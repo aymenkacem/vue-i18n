@@ -160,7 +160,7 @@ class CustomFormatter {
      //
      // @param {Object | Array} values
      //   values of `message` interpolation.
-     //   passed values with `$t`, `$tc` and `i18n` functional component.
+     //   passed values with `$t`, `$tp` and `i18n` functional component.
      //   e.g.
      //   - $t('hello', { name: 'kazupon' }) -> passed values: Object `{ name: 'kazupon' }`
      //   - $t('hello', ['kazupon']) -> passed values: Array `['kazupon']`
@@ -174,7 +174,7 @@ class CustomFormatter {
      //
      // @return {Array<any>}
      //   interpolated values. you need to return the following:
-     //   - array of string, when is using `$t` or `$tc`.
+     //   - array of string, when is using `$t` or `$tp`.
      //   - array included VNode object, when is using `i18n` functional component.
      //
      interpolate (message, values) {

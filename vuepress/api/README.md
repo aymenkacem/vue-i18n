@@ -36,7 +36,7 @@ If default pluralization does not suit your needs, see [pluralization rules in c
 Note that you need to guarantee this context equal to component instance in lifecycle methods (e.g. in `data` options, `const $t = this.$t.bind(this)`).
 :::
 
-#### $tc
+#### $tp
 
   * **Arguments:**
 
@@ -50,7 +50,7 @@ Note that you need to guarantee this context equal to component instance in life
 Localize the locale message of `key` with pluralization. Localize in preferentially component locale messages than global locale messages. If not specified component locale messages, localize with global locale messages. If you specified `locale`, localize the locale messages of `locale`. If you will specify string value to `values`, localize the locale messages of value. If you will specify Array or Object value to `values`, you must specify with `values` of $t.
 
 :::danger Tip
-Note that you need to guarantee this context equal to component instance in lifecycle methods (e.g. in `data` options, `const $tc = this.$tc.bind(this)`).
+Note that you need to guarantee this context equal to component instance in lifecycle methods (e.g. in `data` options, `const $tp = this.$tp.bind(this)`).
 :::
 
 #### $te
@@ -321,7 +321,7 @@ If you use regular expression, you can suppress the fallback warnings that it ma
   ```js
     {
       // Key - locale for the rule to be applied to.
-      // Value - mapping function that maps a choice index from `$tc` to the actual choice of the plural word. (See getChoiceIndex for details)
+      // Value - mapping function that maps a choice index from `$tp` to the actual choice of the plural word. (See getChoiceIndex for details)
       'pt': function(choice, choiceIndex) => Number/* index of the plural word */;
       'ru': function(choice, choiceIndex) => Number/* index of the plural word */;
       'en': function(choice, choiceIndex) => Number/* index of the plural word */;
@@ -371,7 +371,7 @@ The shared locale messages of localization for components. More detail see [Comp
 
   * **Default:** `null`
 
-A handler for post processing of translation. The handler gets after being called with the `$t`, `t`, `$tc`, and `tc`.
+A handler for post processing of translation. The handler gets after being called with the `$t`, `t`, `$tp`, and `tp`.
 
 This handler is useful if you want to filter on translated text such as space trimming.
 
@@ -618,7 +618,7 @@ If you set `warn` or` error` in the `warnHtmlInMessage` property, when this meth
 
 This is the same as the `Function` returned with `$t` method. More detail see [$t](#t).
 
-#### tc( key, [choice], [values] )
+#### tp( key, [choice], [values] )
 
   * **Arguments:**
 
@@ -628,7 +628,7 @@ This is the same as the `Function` returned with `$t` method. More detail see [$
 
   * **Return:** `TranslateResult`
 
-This is the same as the `Function` returned `$tc` method. More detail see [$tc](#tc).
+This is the same as the `Function` returned `$tp` method. More detail see [$tp](#tp).
 
 #### te( key, [locale] )
 

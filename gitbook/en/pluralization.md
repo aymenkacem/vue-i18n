@@ -14,15 +14,15 @@ const messages = {
 ```
 Where the format is `0 things | 1 thing | more than 1 thing`.
 
-Your template needs to use `$tc()`, not `$t()`:
+Your template needs to use `$tp()`, not `$t()`:
 
 ```html
-<p>{{ $tc('car', 1) }}</p>
-<p>{{ $tc('car', 2) }}</p>
+<p>{{ $tp('car', 1) }}</p>
+<p>{{ $tp('car', 2) }}</p>
 
-<p>{{ $tc('apple', 0) }}</p>
-<p>{{ $tc('apple', 1) }}</p>
-<p>{{ $tc('apple', 10, { count: 10 }) }}</p>
+<p>{{ $tp('apple', 0) }}</p>
+<p>{{ $tp('apple', 1) }}</p>
+<p>{{ $tp('apple', 10, { count: 10 }) }}</p>
 ```
 Note that if you need to pass in a variable, you might have to pass it in twice like in the last example above.
 
@@ -51,7 +51,7 @@ new VueI18n({
   pluralizationRules: {
     /** Key - language to use the rule for, 'ru', in this case */
     /** Value - function
-     * @param choice {number} a choice index given by the input to $tc: `$tc('path.to.rule', choiceIndex)`
+     * @param choice {number} a choice index given by the input to $tp: `$tp('path.to.rule', choiceIndex)`
      * @param choicesLength {number} an overall amount of available choices
      * @returns a final choice index to select plural word by
      **/
@@ -93,19 +93,19 @@ const messages = {
 ```
 Where the format is `0 things | 1 thing | few things | multiple things`.
 
-Your template still needs to use `$tc()`, not `$t()`:
+Your template still needs to use `$tp()`, not `$t()`:
 
 ```html
-<p>{{ $tc('car', 1) }}</p>
-<p>{{ $tc('car', 2) }}</p>
-<p>{{ $tc('car', 4) }}</p>
-<p>{{ $tc('car', 12) }}</p>
-<p>{{ $tc('car', 21) }}</p>
+<p>{{ $tp('car', 1) }}</p>
+<p>{{ $tp('car', 2) }}</p>
+<p>{{ $tp('car', 4) }}</p>
+<p>{{ $tp('car', 12) }}</p>
+<p>{{ $tp('car', 21) }}</p>
 
-<p>{{ $tc('banana', 0) }}</p>
-<p>{{ $tc('banana', 4) }}</p>
-<p>{{ $tc('banana', 11) }}</p>
-<p>{{ $tc('banana', 31) }}</p>
+<p>{{ $tp('banana', 0) }}</p>
+<p>{{ $tp('banana', 4) }}</p>
+<p>{{ $tp('banana', 11) }}</p>
+<p>{{ $tp('banana', 31) }}</p>
 ```
 
 Which results in:

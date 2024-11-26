@@ -2,7 +2,7 @@
 
 你可以使用复数进行翻译。你必须定义具有管道 `|` 分隔符的语言环境，并在管道分隔符中定义复数。
 
-*您的模板将需要使用 `$tc()` 而不是 `$t()`。
+*您的模板将需要使用 `$tp()` 而不是 `$t()`。
 
 语言环境信息如下：
 
@@ -18,12 +18,12 @@ const messages = {
 模板如下：
 
 ```html
-<p>{{ $tc('car', 1) }}</p>
-<p>{{ $tc('car', 2) }}</p>
+<p>{{ $tp('car', 1) }}</p>
+<p>{{ $tp('car', 2) }}</p>
 
-<p>{{ $tc('apple', 0) }}</p>
-<p>{{ $tc('apple', 1) }}</p>
-<p>{{ $tc('apple', 10, { count: 10 }) }}</p>
+<p>{{ $tp('apple', 0) }}</p>
+<p>{{ $tp('apple', 1) }}</p>
+<p>{{ $tp('apple', 10, { count: 10 }) }}</p>
 ```
 
 输出如下：
@@ -55,12 +55,12 @@ const messages = {
 模板如下：
 
 ```html
-<p>{{ $tc('apple', 10, { count: 10 }) }}</p>
-<p>{{ $tc('apple', 10) }}</p>
+<p>{{ $tp('apple', 10, { count: 10 }) }}</p>
+<p>{{ $tp('apple', 10) }}</p>
 
-<p>{{ $tc('banana', 1, { n: 1 }) }}</p>
-<p>{{ $tc('banana', 1) }}</p>
-<p>{{ $tc('banana', 100, { n: 'too many' }) }}</p>
+<p>{{ $tp('banana', 1, { n: 1 }) }}</p>
+<p>{{ $tp('banana', 1) }}</p>
+<p>{{ $tp('banana', 100, { n: 'too many' }) }}</p>
 ```
 
 输出如下：
@@ -88,7 +88,7 @@ new VueI18n({
   // Value - 选择正确的复数形式的功能
   pluralizationRules: {
     /**
-     * @param choice {number} 输入给$的选择索引 $tc：`$tc('path.to.rule', choiceIndex)`
+     * @param choice {number} 输入给$的选择索引 $tp：`$tp('path.to.rule', choiceIndex)`
      * @param choicesLength {number} 可用选择总数
      * @returns 最终选择索引以选择复数单词
      */
@@ -131,19 +131,19 @@ const messages = {
 格式在哪里 `0 东西 | 事情以结尾结束 1 | 事情以结尾结束 2-4 | 事情以结尾结束 5-9, 0 和青少年 (10-19)`.
 附言 斯拉夫多元化是困难的，您可以阅读有关它的更多信息 [这里](http://www.russianlessons.net/lessons/lesson11_main.php).
 
-你的模板仍然需要使用 `$tc()`，而不是 `$t()` ：
+你的模板仍然需要使用 `$tp()`，而不是 `$t()` ：
 
 ```html
-<p>{{ $tc('car', 1) }}</p>
-<p>{{ $tc('car', 2) }}</p>
-<p>{{ $tc('car', 4) }}</p>
-<p>{{ $tc('car', 12) }}</p>
-<p>{{ $tc('car', 21) }}</p>
+<p>{{ $tp('car', 1) }}</p>
+<p>{{ $tp('car', 2) }}</p>
+<p>{{ $tp('car', 4) }}</p>
+<p>{{ $tp('car', 12) }}</p>
+<p>{{ $tp('car', 21) }}</p>
 
-<p>{{ $tc('banana', 0) }}</p>
-<p>{{ $tc('banana', 4) }}</p>
-<p>{{ $tc('banana', 11) }}</p>
-<p>{{ $tc('banana', 31) }}</p>
+<p>{{ $tp('banana', 0) }}</p>
+<p>{{ $tp('banana', 4) }}</p>
+<p>{{ $tp('banana', 11) }}</p>
+<p>{{ $tp('banana', 31) }}</p>
 ```
 
 结果如下：

@@ -92,7 +92,7 @@ i18n.mergeNumberFormat           // $ExpectType (locale: string, format: NumberF
 i18n.t
 // tslint:disable-next-line:max-line-length
 // $ExpectType { (key: string, choice?: number | undefined, values?: { [key: string]: any; } | undefined): string; (key: string, choice: number, locale: string, values?: { [key: string]: any; } | undefined): string; }
-i18n.tc
+i18n.tp
 // $ExpectType (key: string, locale?: string | undefined) => boolean
 i18n.te
 // tslint:disable-next-line:max-line-length
@@ -115,13 +115,13 @@ vm.$t(key, { x: 'x' })             // $ExpectType TranslateResult
 vm.$t(key, locale)
 vm.$t(key, locale, ['', 0, false, null, undefined])  // $ExpectType TranslateResult
 vm.$t(key, locale, { x: 'x' })     // $ExpectType TranslateResult
-vm.$tc(key)                        // $ExpectType string
-vm.$tc(key, 1)                     // $ExpectType string
-vm.$tc(key, 1, [])                 // $ExpectType string
-vm.$tc(key, 1, {})                 // $ExpectType string
-vm.$tc(key, 1, locale)             // $ExpectType string
-vm.$tc(key, 1, locale, [])         // $ExpectType string
-vm.$tc(key, 1, locale, {})         // $ExpectType string
+vm.$tp(key)                        // $ExpectType string
+vm.$tp(key, 1)                     // $ExpectType string
+vm.$tp(key, 1, [])                 // $ExpectType string
+vm.$tp(key, 1, {})                 // $ExpectType string
+vm.$tp(key, 1, locale)             // $ExpectType string
+vm.$tp(key, 1, locale, [])         // $ExpectType string
+vm.$tp(key, 1, locale, {})         // $ExpectType string
 vm.$te(key)                        // $ExpectType boolean
 vm.$te(key, locale)                // $ExpectType boolean
 vm.$d(1, key)                      // $ExpectType string

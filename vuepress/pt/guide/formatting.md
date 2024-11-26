@@ -179,7 +179,7 @@ class CustomFormatter {
   //
   // @param {Object | Array} values
   //   valores de interpolação `message`.
-  //   valores transmitidos com `$t`, `$tc` e componente funcional `i18n`.
+  //   valores transmitidos com `$t`, `$tp` e componente funcional `i18n`.
   //   p. ex.
   //   - $t('hello', { name: 'Lucas' }) -> valores passados: Object `{ name: 'Lucas' }`
   //   - $t('hello', ['Lucas']) -> valores passados: Array `['Lucas']`
@@ -193,7 +193,7 @@ class CustomFormatter {
   //
   // @return {Array<any>}
   //   valores interpolados. Eles são necessários para retornar o seguinte:
-  //   - um array de strings ao usar `$t` ou `$tc`.
+  //   - um array de strings ao usar `$t` ou `$tp`.
   //   - um array incluindo o objeto VNode, ao usar `i18n` em um componente funcional.
   //
   interpolate(message, values) {

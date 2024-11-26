@@ -2,7 +2,7 @@
 
 You can translate with pluralization. You must define the locale that have a pipe `|` separator, and define plurals in pipe separator.
 
-*Your template will need to use `$tc()` instead of `$t()`.*
+*Your template will need to use `$tp()` instead of `$t()`.*
 
 Locale messages below:
 
@@ -18,12 +18,12 @@ const messages = {
 Template below:
 
 ```html
-<p>{{ $tc('car', 1) }}</p>
-<p>{{ $tc('car', 2) }}</p>
+<p>{{ $tp('car', 1) }}</p>
+<p>{{ $tp('car', 2) }}</p>
 
-<p>{{ $tc('apple', 0) }}</p>
-<p>{{ $tc('apple', 1) }}</p>
-<p>{{ $tc('apple', 10, { count: 10 }) }}</p>
+<p>{{ $tp('apple', 0) }}</p>
+<p>{{ $tp('apple', 1) }}</p>
+<p>{{ $tp('apple', 10, { count: 10 }) }}</p>
 ```
 
 Output below:
@@ -57,12 +57,12 @@ const messages = {
 Template below:
 
 ```html
-<p>{{ $tc('apple', 10, { count: 10 }) }}</p>
-<p>{{ $tc('apple', 10) }}</p>
+<p>{{ $tp('apple', 10, { count: 10 }) }}</p>
+<p>{{ $tp('apple', 10) }}</p>
 
-<p>{{ $tc('banana', 1, { n: 1 }) }}</p>
-<p>{{ $tc('banana', 1) }}</p>
-<p>{{ $tc('banana', 100, { n: 'too many' }) }}</p>
+<p>{{ $tp('banana', 1, { n: 1 }) }}</p>
+<p>{{ $tp('banana', 1) }}</p>
+<p>{{ $tp('banana', 100, { n: 'too many' }) }}</p>
 ```
 
 Output below:
@@ -92,7 +92,7 @@ new VueI18n({
   // Value - function to choose right plural form
   pluralizationRules: {
     /**
-     * @param choice {number} a choice index given by the input to $tc: `$tc('path.to.rule', choiceIndex)`
+     * @param choice {number} a choice index given by the input to $tp: `$tp('path.to.rule', choiceIndex)`
      * @param choicesLength {number} an overall amount of available choices
      * @returns a final choice index to select plural word by
      */
@@ -135,19 +135,19 @@ const messages = {
 Where the format is `0 things | things count ends with 1 | things count ends with 2-4 | things count ends with 5-9, 0 and teens (10-19)`.
 P.S. Slavic pluralization is difficult, you can read more about it [here](http://www.russianlessons.net/lessons/lesson11_main.php).
 
-Your template still needs to use `$tc()`, not `$t()`:
+Your template still needs to use `$tp()`, not `$t()`:
 
 ```html
-<p>{{ $tc('car', 1) }}</p>
-<p>{{ $tc('car', 2) }}</p>
-<p>{{ $tc('car', 4) }}</p>
-<p>{{ $tc('car', 12) }}</p>
-<p>{{ $tc('car', 21) }}</p>
+<p>{{ $tp('car', 1) }}</p>
+<p>{{ $tp('car', 2) }}</p>
+<p>{{ $tp('car', 4) }}</p>
+<p>{{ $tp('car', 12) }}</p>
+<p>{{ $tp('car', 21) }}</p>
 
-<p>{{ $tc('banana', 0) }}</p>
-<p>{{ $tc('banana', 4) }}</p>
-<p>{{ $tc('banana', 11) }}</p>
-<p>{{ $tc('banana', 31) }}</p>
+<p>{{ $tp('banana', 0) }}</p>
+<p>{{ $tp('banana', 4) }}</p>
+<p>{{ $tp('banana', 11) }}</p>
+<p>{{ $tp('banana', 31) }}</p>
 ```
 
 Which results in:

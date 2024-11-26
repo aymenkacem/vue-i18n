@@ -149,9 +149,9 @@ Use `VueI18n#t` method:
   i18n.t('greeting', { name: 'kazupon' }) // -> hi kazupon
   ```
 
-### Vue.tc <sup>replaced</sup>
+### Vue.tp <sup>replaced</sup>
 
-Use `VueI18n#tc` method:
+Use `VueI18n#tp` method:
 
   ```javascript
   const i18n = new VueI18n({
@@ -165,7 +165,7 @@ Use `VueI18n#tc` method:
   })
 
   const count = 10
-  i18n.tc('apple', count, { count }) // -> 10 apples
+  i18n.tp('apple', count, { count }) // -> 10 apples
   ```
 
 ### Vue.te <sup>replaced</sup>

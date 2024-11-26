@@ -34,7 +34,7 @@ sidebar: auto
 注意，你需要在生命周期方法中保证上下文是组件实例 (例如在 `data` 选项中，`const $t = this.$t.bind(this)`)。
 :::
 
-#### $tc
+#### $tp
 
   * **参数：**
 
@@ -48,7 +48,7 @@ sidebar: auto
 以复数形式将语言环境信息 `key` 本地化。在本地化时组件的语言环境信息优先于全局语言环境信息。如果未指定组件的语言环境信息，就使用全局语言环境信息进行本地化。如果你指定了 `locale` 参数，则使用 `locale` 提供的语言环境进行本地化。如果将 `values` 指定为字符串，则该字符串会作为语言环境信息进行本地化。如果将 `values` 指定为 Array 或 Object，则格式必须为 `$t` 的 `values`。
 
 :::danger 提示
-注意，你需要在生命周期方法中保证上下文是组件实例 (例如在 `data` 选项中，`const $tc = this.$tc.bind(this)`)
+注意，你需要在生命周期方法中保证上下文是组件实例 (例如在 `data` 选项中，`const $tp = this.$tp.bind(this)`)
 :::
 
 #### $te
@@ -313,7 +313,7 @@ vue-i18n 版本
   ```js
     {
       // Key - locale for the rule to be applied to.
-      // Value - mapping function that maps a choice index from `$tc` to the actual choice of the plural word. (See getChoiceIndex for details)
+      // Value - mapping function that maps a choice index from `$tp` to the actual choice of the plural word. (See getChoiceIndex for details)
       'pt': function(choice, choiceIndex) => Number/* index of the plural word */;
       'ru': function(choice, choiceIndex) => Number/* index of the plural word */;
       'en': function(choice, choiceIndex) => Number/* index of the plural word */;
@@ -484,7 +484,7 @@ However, for most usages [pluralizationRules constructor option](#pluralizationr
 
 这与 `$t` 方法返回的 `Function` 相同。更多细节见[$t](#t)。
 
-#### tc( key, [choice], [values] )
+#### tp( key, [choice], [values] )
 
   * **参数：**
 
@@ -494,7 +494,7 @@ However, for most usages [pluralizationRules constructor option](#pluralizationr
 
   * **返回值：**`TranslateResult`
 
-这与 `$tc` 方法返回的 `Function` 相同。更多细节见[$tc](#tc)。
+这与 `$tp` 方法返回的 `Function` 相同。更多细节见[$tp](#tp)。
 
 #### te( key, [locale] )
 

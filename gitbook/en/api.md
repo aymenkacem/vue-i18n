@@ -26,7 +26,7 @@
 
   Localize the locale message of `key`. Localize in preferentially component locale messages than global locale messages. If not specified component locale messages, localize with global locale messages. If you specified `locale`, localize the locale messages of `locale`. If you specified `key` of list / named formatting local messages, you must specify `values` too. For `values` more details see [Formatting](formatting.md).
 
-#### $tc
+#### $tp
 
 - **Arguments:**
   - `{Path} key`: required
@@ -283,7 +283,7 @@ You can specify the below some options of `I18nOptions` constructor options of [
   ```js
     {
       // Key - locale for the rule to be applied to.
-      // Value - mapping function that maps a choice index from `$tc` to the actual choice of the plural word.
+      // Value - mapping function that maps a choice index from `$tp` to the actual choice of the plural word.
 
       'ru': function (choice, choiceIndex) => Number/* index of the plural word */;
       'en': function (choice, choiceIndex) => Number/* index of the plural word */;
@@ -425,7 +425,7 @@ You can specify the below some options of `I18nOptions` constructor options of [
 - **Return:**: `TranslateResult`
 
 
-#### tc( key, [choice], [values] )
+#### tp( key, [choice], [values] )
 
 - **Arguments:**
   - `{Path} key`: required
@@ -434,7 +434,7 @@ You can specify the below some options of `I18nOptions` constructor options of [
 
 - **Return:** `TranslateResult`
 
-  This is the same as the `Function` returned `$tc` method. More detail see [$tc](#$tc).
+  This is the same as the `Function` returned `$tp` method. More detail see [$tp](#$tp).
 
 #### te( key, [locale] )
 

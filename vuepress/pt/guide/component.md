@@ -2,7 +2,7 @@
 
 Em geral, as informações de localidade (por exemplo, `locale`, `messages`, etc) são definidas como opção de construtor na instância `VueI18n` e define a opção `i18n` como a instância raiz do Vue.
 
-Portanto, você pode realizar traduções globalmente usando os métodos `$t` ou `$tc` na instância raiz do Vue e qualquer um dos componentes nela. Mas também é possível especificar dados para localização em cada componente separadamente, o que pode ser mais conveniente devido ao design orientado a componentes.
+Portanto, você pode realizar traduções globalmente usando os métodos `$t` ou `$tp` na instância raiz do Vue e qualquer um dos componentes nela. Mas também é possível especificar dados para localização em cada componente separadamente, o que pode ser mais conveniente devido ao design orientado a componentes.
 
 Um exemplo de localização baseada em componente:
 

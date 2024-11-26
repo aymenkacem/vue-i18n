@@ -126,7 +126,7 @@
   <span class="token comment">//</span>
   <span class="token comment">// @param {Object | Array} values</span>
   <span class="token comment">//   значения интерполяции `message`.</span>
-  <span class="token comment">//   переданные значения с `$t`, `$tc` и функциональным компонентом `i18n`.</span>
+  <span class="token comment">//   переданные значения с `$t`, `$tp` и функциональным компонентом `i18n`.</span>
   <span class="token comment">//   напр.</span>
   <span class="token comment">//   - $t('hello', { name: 'Alex' }) -&gt; переданные значения: Object `{ name: 'Alex' }`</span>
   <span class="token comment">//   - $t('hello', ['Alex']) -&gt; переданные значения: Array `['Alex']`</span>
@@ -140,7 +140,7 @@
   <span class="token comment">//</span>
   <span class="token comment">// @return {Array&lt;any&gt;}</span>
   <span class="token comment">//   интерполированные значения. Они необходимы чтобы вернуть следующее:</span>
-  <span class="token comment">//   - массив строк, когда используется `$t` или `$tc`.</span>
+  <span class="token comment">//   - массив строк, когда используется `$t` или `$tp`.</span>
   <span class="token comment">//   - массив, включая объект VNode, когда используется функциональный компонент `i18n`.</span>
   <span class="token comment">//</span>
   <span class="token function">interpolate</span><span class="token punctuation">(</span><span class="token parameter">message<span class="token punctuation">,</span> values</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>

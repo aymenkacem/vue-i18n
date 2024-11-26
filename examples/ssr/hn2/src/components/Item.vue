@@ -35,7 +35,7 @@ export default {
   computed: {
     time () {
       const { value, unit } = timeAgo(this.item.time)
-      return `${value} ${this.$tc('time.units.' + unit, value)} ${this.$t('time.ago')}`
+      return `${value} ${this.$tp('time.units.' + unit, value)} ${this.$t('time.ago')}`
     }
   },
   // http://ssr.vuejs.org/en/caching.html#component-level-caching

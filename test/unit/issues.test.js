@@ -511,9 +511,9 @@ describe('issues', () => {
         }
       })
 
-      assert.strictEqual(i18n.tc('test', 1), '1 test')
-      assert.strictEqual(i18n.tc('test', 0), 'no tests')
-      assert.strictEqual(i18n.tc('test', 10), '10 tests')
+      assert.strictEqual(i18n.tp('test', 1), '1 test')
+      assert.strictEqual(i18n.tp('test', 0), 'no tests')
+      assert.strictEqual(i18n.tp('test', 10), '10 tests')
     })
 
     it('should use custom pluralization if available', () => {
@@ -556,16 +556,16 @@ describe('issues', () => {
         }
       })
 
-      assert.strictEqual(i18n.tc('test', 1), '1 test')
-      assert.strictEqual(i18n.tc('test', 0), 'no tests')
-      assert.strictEqual(i18n.tc('test', 10), '10 tests')
+      assert.strictEqual(i18n.tp('test', 1), '1 test')
+      assert.strictEqual(i18n.tp('test', 0), 'no tests')
+      assert.strictEqual(i18n.tp('test', 10), '10 tests')
 
       i18n.locale = 'ru'
 
-      assert.strictEqual(i18n.tc('test', 1), '1 тест')
-      assert.strictEqual(i18n.tc('test', 3), '3 теста')
-      assert.strictEqual(i18n.tc('test', 0), 'нет тестов')
-      assert.strictEqual(i18n.tc('test', 10), '10 тестов')
+      assert.strictEqual(i18n.tp('test', 1), '1 тест')
+      assert.strictEqual(i18n.tp('test', 3), '3 теста')
+      assert.strictEqual(i18n.tp('test', 0), 'нет тестов')
+      assert.strictEqual(i18n.tp('test', 10), '10 тестов')
 
       i18n = new VueI18n({
         locale: 'ru',
@@ -580,12 +580,12 @@ describe('issues', () => {
       })
       vm = new Vue({ i18n })
 
-      assert.strictEqual(vm.$tc('car', 0), '0 машин')
-      assert.strictEqual(vm.$tc('car', 1), '1 машина')
-      assert.strictEqual(vm.$tc('car', 2), '2 машины')
-      assert.strictEqual(vm.$tc('car', 4), '4 машины')
-      assert.strictEqual(vm.$tc('car', 12), '12 машин')
-      assert.strictEqual(vm.$tc('car', 21), '21 машина')
+      assert.strictEqual(vm.$tp('car', 0), '0 машин')
+      assert.strictEqual(vm.$tp('car', 1), '1 машина')
+      assert.strictEqual(vm.$tp('car', 2), '2 машины')
+      assert.strictEqual(vm.$tp('car', 4), '4 машины')
+      assert.strictEqual(vm.$tp('car', 12), '12 машин')
+      assert.strictEqual(vm.$tp('car', 21), '21 машина')
     })
 
     it('ensures backward-compatibility with #451', () => {
@@ -628,12 +628,12 @@ describe('issues', () => {
       })
       vm = new Vue({ i18n })
 
-      assert.strictEqual(vm.$tc('car', 0), '0 машин')
-      assert.strictEqual(vm.$tc('car', 1), '1 машина')
-      assert.strictEqual(vm.$tc('car', 2), '2 машины')
-      assert.strictEqual(vm.$tc('car', 4), '4 машины')
-      assert.strictEqual(vm.$tc('car', 12), '12 машин')
-      assert.strictEqual(vm.$tc('car', 21), '21 машина')
+      assert.strictEqual(vm.$tp('car', 0), '0 машин')
+      assert.strictEqual(vm.$tp('car', 1), '1 машина')
+      assert.strictEqual(vm.$tp('car', 2), '2 машины')
+      assert.strictEqual(vm.$tp('car', 4), '4 машины')
+      assert.strictEqual(vm.$tp('car', 12), '12 машин')
+      assert.strictEqual(vm.$tp('car', 21), '21 машина')
 
       // Set the default implementation back
       VueI18n.prototype.getChoiceIndex = defaultImpl
