@@ -1,5 +1,5 @@
 {
-  "name": "vue-i18n-modified",
+  "name": "vue-i18n-custom",
   "description": "Internationalization plugin for Vue.js",
   "version": "8.28.2",
   "author": {
@@ -7,7 +7,7 @@
     "email": "kawakazu80@gmail.com"
   },
   "bugs": {
-    "url": "https://github.com/aymenkacem/vue-i18n-modified/issues"
+    "url": "https://github.com/kazupon/vue-i18n/issues"
   },
   "changelog": {
     "labels": {
@@ -105,7 +105,7 @@
     "tags": "vetur/tags.json",
     "attributes": "vetur/attributes.json"
   },
-  "homepage": "https://github.com/aymenkacem/vue-i18n-modified#readme",
+  "homepage": "https://github.com/kazupon/vue-i18n#readme",
   "keywords": [
     "i18n",
     "internationalization",
@@ -118,7 +118,7 @@
   "module": "dist/vue-i18n.esm.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aymenkacem/vue-i18n-modified.git"
+    "url": "git+https://github.com/kazupon/vue-i18n.git"
   },
   "scripts": {
     "build": "node config/build.js",
