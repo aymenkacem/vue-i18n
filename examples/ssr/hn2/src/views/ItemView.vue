@@ -46,7 +46,7 @@ export default {
     },
     time () {
       const { value, unit } = timeAgo(this.item.time)
-      return `${value} ${this.$tc('time.units.' + unit, value)} ${this.$t('time.ago')}`
+      return `${value} ${this.$tp('time.units.' + unit, value)} ${this.$t('time.ago')}`
     }
   },
 

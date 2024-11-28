@@ -100,7 +100,7 @@ world<span class="token tag"><span class="token tag"><span class="token punctuat
      <span class="token comment">//</span>
      <span class="token comment">// @param {Object | Array} 值</span>
      <span class="token comment">//   `message` 插值的值</span>
-     <span class="token comment">//   使用 `$t`， `$tc` 和 `i18n` 函数式组件传递值。</span>
+     <span class="token comment">//   使用 `$t`， `$tp` 和 `i18n` 函数式组件传递值。</span>
      <span class="token comment">//   e.g.</span>
      <span class="token comment">//   - $t('hello', { name: 'kazupon' }) -&gt; 传递值：Object `{ name: 'kazupon' }`</span>
      <span class="token comment">//   - $t('hello', ['kazupon']) -&gt; 传递值：Array `['kazupon']`</span>
@@ -114,7 +114,7 @@ world<span class="token tag"><span class="token tag"><span class="token punctuat
      <span class="token comment">//</span>
      <span class="token comment">// @return {Array&lt;any&gt;}</span>
      <span class="token comment">//   插值，你需要返回以下内容：</span>
-     <span class="token comment">//   - 当使用 `$t` 或 `$tc` 数组中应该是字符串。</span>
+     <span class="token comment">//   - 当使用 `$t` 或 `$tp` 数组中应该是字符串。</span>
      <span class="token comment">//   - 当使用 `i18n` 函数式组件时 数组中应包含 VNode 对象。</span>
      <span class="token comment">//</span>
      <span class="token function">interpolate</span> <span class="token punctuation">(</span><span class="token parameter">message<span class="token punctuation">,</span> values</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>

@@ -104,7 +104,7 @@ world<span class="token tag"><span class="token tag"><span class="token punctuat
      <span class="token comment">//</span>
      <span class="token comment">// @param {Object | Array} values</span>
      <span class="token comment">//   values of `message` interpolation.</span>
-     <span class="token comment">//   passed values with `$t`, `$tc` and `i18n` functional component.</span>
+     <span class="token comment">//   passed values with `$t`, `$tp` and `i18n` functional component.</span>
      <span class="token comment">//   e.g.</span>
      <span class="token comment">//   - $t('hello', { name: 'kazupon' }) -&gt; passed values: Object `{ name: 'kazupon' }`</span>
      <span class="token comment">//   - $t('hello', ['kazupon']) -&gt; passed values: Array `['kazupon']`</span>
@@ -118,7 +118,7 @@ world<span class="token tag"><span class="token tag"><span class="token punctuat
      <span class="token comment">//</span>
      <span class="token comment">// @return {Array&lt;any&gt;}</span>
      <span class="token comment">//   interpolated values. you need to return the following:</span>
-     <span class="token comment">//   - array of string, when is using `$t` or `$tc`.</span>
+     <span class="token comment">//   - array of string, when is using `$t` or `$tp`.</span>
      <span class="token comment">//   - array included VNode object, when is using `i18n` functional component.</span>
      <span class="token comment">//</span>
      <span class="token function">interpolate</span> <span class="token punctuation">(</span><span class="token parameter">message<span class="token punctuation">,</span> values</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>

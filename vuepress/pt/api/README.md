@@ -34,7 +34,7 @@ Obtendo uma mensagem traduzida usando a chave `key`. As mensagens de localizaç�
 Observe que você precisa garantir este contexto igual à instância do componente nos métodos em seu ciclo de vida (por exemplo, nas opções de `data`,` const $t = this.$t.bind(this) `).
 :::
 
-#### $tc
+#### $tp
 
 * **Argumentos:**
 
@@ -50,7 +50,7 @@ Obtendo uma mensagem traduzida usando a `key` com pluralização. As mensagens d
 Se a implementação de pluralização padrão não for adequada para você, consulte [regras de pluralização nas opções do construtor](#pluralizationrules) e [pluralização customizada](../guide/pluralization.md).
 
 :::danger Dica
-Observe que você precisa garantir este contexto igual à instância do componente nos métodos em seu ciclo de vida (por exemplo, nas opções de `data`, `const $tc = this.$tc.bind(this)`).
+Observe que você precisa garantir este contexto igual à instância do componente nos métodos em seu ciclo de vida (por exemplo, nas opções de `data`, `const $tp = this.$tp.bind(this)`).
 :::
 
 #### $te
@@ -383,7 +383,7 @@ Mensagens de localização comuns quando localizadas em componentes. Ver [locali
 
 * **Padrão:** `null`
 
-Um manipulador para pós-processamento da tradução. Executado após chamar `$t`, `t`, `$tc` e `tc`.
+Um manipulador para pós-processamento da tradução. Executado após chamar `$t`, `t`, `$tp` e `tp`.
 
 Pode ser útil se você precisar processar adicionalmente o texto final da tradução, por exemplo, para eliminar os espaços e cortes de espaçamento.
 
@@ -620,7 +620,7 @@ Se você definir `warn` ou `error` na propriedade `warnHtmlInMessage`, quando es
 
 Semelhante à função retornada pelo método `$t`. Veja [$t](#t) para detalhes.
 
-#### tc( key, [choice], [values] )
+#### tp( key, [choice], [values] )
 
 * **Argumentos:**
 
@@ -630,7 +630,7 @@ Semelhante à função retornada pelo método `$t`. Veja [$t](#t) para detalhes.
 
 * **Retorno:** `TranslateResult`
 
-Semelhante à função retornada pelo método `$tc`. Veja [$tc](#tc) para detalhes.
+Semelhante à função retornada pelo método `$tp`. Veja [$tp](#tp) para detalhes.
 
 #### te( key, [locale] )
 

@@ -150,7 +150,7 @@ declare interface I18n {
   mergeLocaleMessage (locale: Locale, message: LocaleMessageObject): void,
   t (key: Path, ...values: any): TranslateResult,
   i (key: Path, locale: Locale, values: Object): TranslateResult,
-  tc (key: Path, choice?: number, ...values: any): TranslateResult,
+  tp (key: Path, choice?: number, ...values: any): TranslateResult,
   te (key: Path, locale?: Locale): boolean,
   getDateTimeFormat (locale: Locale): DateTimeFormat,
   setDateTimeFormat (locale: Locale, format: DateTimeFormat): void,

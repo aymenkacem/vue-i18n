@@ -26,16 +26,16 @@ describe('postTranslation option', () => {
     })
   })
 
-  describe('tc', () => {
+  describe('tp', () => {
     it('should be hooked', () => {
-      assert.strictEqual(i18n.tc('apple', 0), 'no apples')
+      assert.strictEqual(i18n.tp('apple', 0), 'no apples')
     })
   })
 
-  describe('$tc', () => {
+  describe('$tp', () => {
     it('should be hooked', () => {
       const vm = new Vue({ i18n })
-      assert.strictEqual(vm.$tc('apple', 0), 'no apples')
+      assert.strictEqual(vm.$tp('apple', 0), 'no apples')
     })
   })
 

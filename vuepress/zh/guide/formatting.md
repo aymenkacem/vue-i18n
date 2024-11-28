@@ -155,7 +155,7 @@ class CustomFormatter {
      //
      // @param {Object | Array} 值
      //   `message` 插值的值
-     //   使用 `$t`， `$tc` 和 `i18n` 函数式组件传递值。
+     //   使用 `$t`， `$tp` 和 `i18n` 函数式组件传递值。
      //   e.g.
      //   - $t('hello', { name: 'kazupon' }) -> 传递值：Object `{ name: 'kazupon' }`
      //   - $t('hello', ['kazupon']) -> 传递值：Array `['kazupon']`
@@ -169,7 +169,7 @@ class CustomFormatter {
      //
      // @return {Array<any>}
      //   插值，你需要返回以下内容：
-     //   - 当使用 `$t` 或 `$tc` 数组中应该是字符串。
+     //   - 当使用 `$t` 或 `$tp` 数组中应该是字符串。
      //   - 当使用 `i18n` 函数式组件时 数组中应包含 VNode 对象。
      //
      interpolate (message, values) {

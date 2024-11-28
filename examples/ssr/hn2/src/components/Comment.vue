@@ -35,12 +35,12 @@ export default {
     },
     time () {
       const { value, unit } = timeAgo(this.comment.time)
-      return `${value} ${this.$tc('time.units.' + unit, value)} ${this.$t('time.ago')}`
+      return `${value} ${this.$tp('time.units.' + unit, value)} ${this.$t('time.ago')}`
     }
   },
   methods: {
     pluralize: function (n) {
-      return n + ' ' + this.$tc('comment.reply', n)
+      return n + ' ' + this.$tp('comment.reply', n)
     }
   }
 }

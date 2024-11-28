@@ -74,7 +74,7 @@ function t (el: any, binding: Object, vnode: any): void {
 
   const vm: any = vnode.context
   if (choice != null) {
-    el._vt = el.textContent = vm.$i18n.tc(path, choice, ...makeParams(locale, args))
+    el._vt = el.textContent = vm.$i18n.tp(path, choice, ...makeParams(locale, args))
   } else {
     el._vt = el.textContent = vm.$i18n.t(path, ...makeParams(locale, args))
   }

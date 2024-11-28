@@ -205,7 +205,7 @@
 * [#1151](https://github.com/kazupon/vue-i18n/pull/1151) fix: i18n reference to root causes memory leak (#1044) ([@lzxb](https://github.com/lzxb))
 
 #### :pencil: Documentation
-* [#1152](https://github.com/kazupon/vue-i18n/pull/1152) $tc return type ([@Glandos](https://github.com/Glandos))
+* [#1152](https://github.com/kazupon/vue-i18n/pull/1152) $tp return type ([@Glandos](https://github.com/Glandos))
 
 #### Committers: 2
 - Glandos ([@Glandos](https://github.com/Glandos))

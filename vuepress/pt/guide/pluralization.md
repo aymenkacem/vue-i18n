@@ -2,7 +2,7 @@
 
 Você pode usar pluralização para mensagens traduzidas. Para fazer isso, precisa definir a localidade e especificar as strings de tradução para os diferentes casos por meio do separador `|`.
 
-*Seu template precisará usar `$tc()` em vez de `$t()`.*
+*Seu template precisará usar `$tp()` em vez de `$t()`.*
 
 Mensagens locais abaixo:
 
@@ -22,12 +22,12 @@ const messages = {
 Template:
 
 ```html
-<p>{{ $tc('car', 1) }}</p>
-<p>{{ $tc('car', 2) }}</p>
+<p>{{ $tp('car', 1) }}</p>
+<p>{{ $tp('car', 2) }}</p>
 
-<p>{{ $tc('apple', 0) }}</p>
-<p>{{ $tc('apple', 1) }}</p>
-<p>{{ $tc('apple', 10, { count: 10 }) }}</p>
+<p>{{ $tp('apple', 0) }}</p>
+<p>{{ $tp('apple', 1) }}</p>
+<p>{{ $tp('apple', 10, { count: 10 }) }}</p>
 ```
 
 O resultado será o seguinte:
@@ -63,12 +63,12 @@ const messages = {
 Template:
 
 ```html
-<p>{{ $tc('apple', 10, { count: 10 }) }}</p>
-<p>{{ $tc('apple', 10) }}</p>
+<p>{{ $tp('apple', 10, { count: 10 }) }}</p>
+<p>{{ $tp('apple', 10) }}</p>
 
-<p>{{ $tc('banana', 1, { n: 1 }) }}</p>
-<p>{{ $tc('banana', 1) }}</p>
-<p>{{ $tc('banana', 100, { n: 'Muitas' }) }}</p>
+<p>{{ $tp('banana', 1, { n: 1 }) }}</p>
+<p>{{ $tp('banana', 1) }}</p>
+<p>{{ $tp('banana', 100, { n: 'Muitas' }) }}</p>
 ```
 
 O resultado será o seguinte:
@@ -95,7 +95,7 @@ new VueI18n({
   // Value - função para escolher a forma plural correta
   pluralizationRules: {
     /**
-     * @param choice {number} um índice de escolha dado pela entrada de $tc: `$tc('path.to.rule', choiceIndex)`
+     * @param choice {number} um índice de escolha dado pela entrada de $tp: `$tp('path.to.rule', choiceIndex)`
      * @param choicesLength {number} quantidade geral de opções disponíveis
      * @returns índice final para selecionar as palavras no plural
      */
@@ -139,19 +139,19 @@ const messages = {
 Onde o formato é `0 coisas | número de itens termina em 1 | o número de coisas que termina em 2-4 | o número de coisas que termina com 5-9, 0 e o número coisas que termina de 11 a 19`.
 P.S. A pluralização eslava é complexa, você pode ler mais sobre isso [aqui](http://www.russianlessons.net/lessons/lesson11_main.php).
 
-No template, você ainda precisa usar `$tc()` em vez de `$t()`:
+No template, você ainda precisa usar `$tp()` em vez de `$t()`:
 
 ```html
-<p>{{ $tc('car', 1) }}</p>
-<p>{{ $tc('car', 2) }}</p>
-<p>{{ $tc('car', 4) }}</p>
-<p>{{ $tc('car', 12) }}</p>
-<p>{{ $tc('car', 21) }}</p>
+<p>{{ $tp('car', 1) }}</p>
+<p>{{ $tp('car', 2) }}</p>
+<p>{{ $tp('car', 4) }}</p>
+<p>{{ $tp('car', 12) }}</p>
+<p>{{ $tp('car', 21) }}</p>
 
-<p>{{ $tc('banana', 0) }}</p>
-<p>{{ $tc('banana', 4) }}</p>
-<p>{{ $tc('banana', 11) }}</p>
-<p>{{ $tc('banana', 31) }}</p>
+<p>{{ $tp('banana', 0) }}</p>
+<p>{{ $tp('banana', 4) }}</p>
+<p>{{ $tp('banana', 11) }}</p>
+<p>{{ $tp('banana', 31) }}</p>
 ```
 
 O resultado será o seguinte:

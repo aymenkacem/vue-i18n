@@ -103,7 +103,7 @@ declare namespace VueI18n {
   type NumberFormatResult = string;
   type PluralizationRulesMap = {
     /**
-     * @param choice {number} a choice index given by the input to $tc: `$tc('path.to.rule', choiceIndex)`
+     * @param choice {number} a choice index given by the input to $tp: `$tp('path.to.rule', choiceIndex)`
      * @param choicesLength {number} an overall amount of available choices
      * @returns a final choice index
     */
@@ -183,8 +183,8 @@ export declare interface IVueI18n {
   postTranslation: VueI18n.PostTranslationHandler;
   t(key: VueI18n.Path, values?: VueI18n.Values): VueI18n.TranslateResult;
   t(key: VueI18n.Path, locale: VueI18n.Locale, values?: VueI18n.Values): VueI18n.TranslateResult;
-  tc(key: VueI18n.Path, choice?: VueI18n.Choice, values?: VueI18n.Values): string;
-  tc(
+  tp(key: VueI18n.Path, choice?: VueI18n.Choice, values?: VueI18n.Values): string;
+  tp(
     key: VueI18n.Path,
     choice: VueI18n.Choice,
     locale: VueI18n.Locale,
@@ -236,8 +236,8 @@ declare class VueI18n {
 
   t(key: VueI18n.Path, values?: VueI18n.Values): VueI18n.TranslateResult;
   t(key: VueI18n.Path, locale: VueI18n.Locale, values?: VueI18n.Values): VueI18n.TranslateResult;
-  tc(key: VueI18n.Path, choice?: VueI18n.Choice, values?: VueI18n.Values): string;
-  tc(key: VueI18n.Path, choice: VueI18n.Choice, locale: VueI18n.Locale, values?: VueI18n.Values): string;
+  tp(key: VueI18n.Path, choice?: VueI18n.Choice, values?: VueI18n.Values): string;
+  tp(key: VueI18n.Path, choice: VueI18n.Choice, locale: VueI18n.Locale, values?: VueI18n.Values): string;
   te(key: VueI18n.Path, locale?: VueI18n.Locale): boolean;
   d(value: number | Date, key?: VueI18n.Path, locale?: VueI18n.Locale): VueI18n.DateTimeFormatResult;
   d(value: number | Date, args?: { [key: string]: string }): VueI18n.DateTimeFormatResult;
@@ -259,7 +259,7 @@ declare class VueI18n {
   mergeNumberFormat(locale: VueI18n.Locale, format: VueI18n.NumberFormat): void;
 
   /**
-   * @param choice {number} a choice index given by the input to $tc: `$tc('path.to.rule', choiceIndex)`
+   * @param choice {number} a choice index given by the input to $tp: `$tp('path.to.rule', choiceIndex)`
    * @param choicesLength {number} an overall amount of available choices
    * @returns a final choice index
   */
@@ -274,7 +274,7 @@ declare module 'vue/types/vue' {
   interface Vue {
     readonly $i18n: VueI18n & IVueI18n;
     $t: typeof VueI18n.prototype.t;
-    $tc: typeof VueI18n.prototype.tc;
+    $tp: typeof VueI18n.prototype.tp;
     $te: typeof VueI18n.prototype.te;
     $d: typeof VueI18n.prototype.d;
     $n: typeof VueI18n.prototype.n;
