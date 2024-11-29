@@ -89,12 +89,12 @@
     "webpack-dev-server": "^3.11.0"
   },
   "files": [
-    "dist/vue-i18n.js",
-    "dist/vue-i18n.min.js",
-    "dist/vue-i18n.common.js",
-    "dist/vue-i18n.esm.js",
-    "dist/vue-i18n.esm.browser.js",
-    "dist/vue-i18n.esm.browser.min.js",
+    "dist/vue-i18n-modified.js",
+    "dist/vue-i18n-modified.min.js",
+    "dist/vue-i18n-modified.common.js",
+    "dist/vue-i18n-modified.esm.js",
+    "dist/vue-i18n-modified.esm.browser.js",
+    "dist/vue-i18n-modified.esm.browser.min.js",
     "src/**/*.js",
     "types/*.d.ts",
     "decls",
@@ -114,8 +114,8 @@
     "vue.js"
   ],
   "license": "MIT",
-  "main": "dist/vue-i18n.common.js",
-  "module": "dist/vue-i18n.esm.js",
+  "main": "dist/vue-i18n-modified.common.js",
+  "module": "dist/vue-i18n-modified.esm.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kazupon/vue-i18n.git"
@@ -145,5 +145,5 @@
   },
   "sideEffects": false,
   "types": "types/index.d.ts",
-  "unpkg": "dist/vue-i18n.js"
+  "unpkg": "dist/vue-i18n-modified.js"
 }
